@@ -1,10 +1,4 @@
 let users = {
-  simon_wong: {
-    id: "simon_wong",
-    name: "Simon Wong",
-    avatarURL: "https://avatars0.githubusercontent.com/u/29855750?s=460&v=4",
-    tweets: []
-  },
   sarah_edo: {
     id: "sarah_edo",
     name: "Sarah Drasner",

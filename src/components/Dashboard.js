@@ -8,11 +8,11 @@ class Dashboard extends Component {
       <div>
         <h3 className='center'>Your Timeline</h3>
         <ul className='dashboard-list'>
-            {this.props.tweetIds.map((id) => {
-                <li key={id}>
-                    <Tweet id={id} />
-                </li>
-            })}
+          {this.props.tweetIds.map((id) => (
+            <li key={id}>
+              <Tweet id={id}/>
+            </li>
+          ))}
         </ul>
       </div>
     )
@@ -20,10 +20,10 @@ class Dashboard extends Component {
 }
 
 function mapStateToProps ({ tweets }) {
-    return {
-        tweetIds: Object.keys(tweets)
-            .sort((a,b) => tweets[b].timestamp - tweets[a].timestamp)
-    }
+  return {
+    tweetIds: Object.keys(tweets)
+      .sort((a,b) => tweets[b].timestamp - tweets[a].timestamp)
+  }
 }
 
 export default connect(mapStateToProps)(Dashboard)
